@@ -3,9 +3,6 @@
   "outputDirectory": "dist",
   "installCommand": "npm install",
   "framework": "vite",
-  "env": {
-    "VITE_APP_ENV": "@vite_app_env"
-  },
   "routes": [
     {
       "src": "/assets/.*",
