@@ -69,12 +69,11 @@ function Home() {
       <div className="container">
         <Navbar />
         {/* landing */}
-        <div className="row landing align-items-center g-4 home-row">
+        <div className="row landing align-items-center g-4 landing-row">
           <div
             className="col-12 col-lg-6 order-2 order-lg-1 home-content"
             data-aos="fade-right"
-            data-aos-delay="50"
-          >
+            data-aos-delay="50">
             <h1 className="text-capitalize text-white mb-4">
               building premium softwaare & design experiences .
             </h1>
@@ -93,10 +92,9 @@ function Home() {
             </div>
           </div>
           <div
-            className="col-12 col-lg-6 order-1 order-lg-2 home-image"
+            className="col-12 col-lg-6 order-1 order-lg-2 landing-image"
             data-aos="fade-left"
-            data-aos-delay="100"
-          >
+            data-aos-delay="100">
             <img className="img-fluid" src={homeImage} alt="Codex" />
           </div>
         </div>
@@ -109,8 +107,7 @@ function Home() {
               <div
                 className="service-card text-center"
                 data-aos="zoom-in"
-                data-aos-delay={index * 90}
-              >
+                data-aos-delay={index * 90}>
                 <img src={service.image} alt={service.title} />
                 <h3 className="text-white text-capitalize mt-4">
                   {service.title}
@@ -128,15 +125,14 @@ function Home() {
         <Numbers />
 
         {/* Why Choose Us*/}
-        <MainTitle title="why choose us ?" />
+        <MainTitle title="why choose us" />
         <div className="row g-4 mb-5">
           {whyChooseUs.map((reason, index) => (
             <div key={reason.id} className="col-lg-6 col-md-6 col-12">
               <div
                 className="reason-card text-start"
                 data-aos="fade-up"
-                data-aos-delay={index * 80}
-              >
+                data-aos-delay={index * 80}>
                 <h3 className="text-capitalize mb-3">{reason.title}</h3>
                 <p className="text-white-50 text-capitalize text-start">
                   {reason.description}
@@ -150,8 +146,7 @@ function Home() {
         <div className="row align-items-center g-4 Enterprise">
           <div
             className="col-12 col-lg-6 home-image Enterprise__image"
-            data-aos="fade-right"
-          >
+            data-aos="fade-right">
             <img className="img-fluid" src={mac} alt="Codex" />
           </div>
           <div className="col-12 col-lg-6" data-aos="fade-left">

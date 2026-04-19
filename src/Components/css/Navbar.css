@@ -5,8 +5,11 @@
   border-top: 1px solid #ffffff4a;
   border-bottom: 1px solid #ffffff4a;
   padding: 10px 14px;
-  transition: background-color 180ms ease, box-shadow 180ms ease,
-    border-color 180ms ease, backdrop-filter 180ms ease;
+  transition:
+    background-color 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease,
+    backdrop-filter 180ms ease;
 }
 
 .navbar.sticky-top {
@@ -15,12 +18,12 @@
 }
 
 .navbar.navbar--scrolled {
-  background: rgba(10, 17, 46, 0.86);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
-  border-top-color: rgba(255, 255, 255, 0.12);
-  border-bottom-color: rgba(255, 255, 255, 0.12);
+  /* background: rgba(10, 17, 46, 0.86); */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 12px 40px #00000073;
+  border-top-color: #ffffff1f;
+  border-bottom-color: #ffffff1f;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -1,15 +1,5 @@
-.home-row {
-  padding-top: 28px;
-  padding-bottom: 24px;
-}
-
 .home-image {
   text-align: center;
-}
-
-.home-image img {
-  max-height: 520px;
-  width: auto;
 }
 
 .home .service-card img {
@@ -340,6 +330,11 @@
   .home .Enterprise__image img {
     max-height: 360px;
   }
+
+  .home .Enterprise .btn-Enterprise {
+    font-size: 16px;
+    padding: 10px 16px;
+  }
 }
 
 @media (max-width: 775.98px) {
@@ -388,5 +383,24 @@
 
   .home .Enterprise__image img {
     max-height: 300px;
+  }
+
+  .home .Enterprise .btn-Enterprise {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home .Enterprise .btn-Enterprise {
+    font-size: 15px;
+    padding: 9px 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  .home .Enterprise .btn-Enterprise {
+    font-size: 12px;
+    padding: 7px 10px;
   }
 }

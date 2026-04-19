@@ -43,6 +43,16 @@ body {
   padding-bottom: 12px !important;
 }
 
+.landing-row {
+  padding-top: 28px;
+  padding-bottom: 24px;
+}
+
+.landing-row img {
+  max-height: 520px;
+  width: auto;
+}
+
 .number-card {
   border-radius: 36px;
   padding: 20px;

@@ -1,0 +1,11 @@
+.services .landing h1 {
+  font-weight: 700;
+  font-size: 59px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+.services .landing h3 {
+  font-weight: 500;
+  font-size: 31px;
+  line-height: 1.1;
+}
