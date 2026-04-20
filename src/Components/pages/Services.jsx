@@ -5,6 +5,7 @@ import Footer from "../Footer";
 import "../css/Services.css";
 
 import featureImage from "../../assets/feature.png";
+import servicesImage from "../../assets/services-image.png";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
@@ -74,36 +75,18 @@ function Services() {
             className="col-12 col-lg-6 order-1 order-lg-2 landing-image text-center"
             data-aos="fade-left"
             data-aos-delay="100">
-            <img className="img-fluid" src={featureImage} alt="Codex" />
+            <img className="img-fluid" src={servicesImage} alt="Codex" />
           </div>
         </div>
 
         {/* Horizontal Timeline */}
         <MainTitle title="Horizontal Timeline" />
 
-        <div className="features-slider" data-aos="fade-up">
-          <Swiper
-            modules={[Navigation, Pagination, Autoplay]}
-            spaceBetween={30}
-            slidesPerView={1}
-            navigation
-            pagination={{ clickable: true }}
-            autoplay={{ delay: 4000, disableOnInteraction: false }}
-            breakpoints={{
-              576: {
-                slidesPerView: 1,
-              },
-              768: {
-                slidesPerView: 2,
-              },
-              1024: {
-                slidesPerView: 3,
-              },
-            }}>
-            {features.map((feature) => (
-              <SwiperSlide key={feature.id}>
-                <div className="feature-item">
-                  <img src={feature.image} alt={feature.title} />
+        <div className="features" data-aos="fade-up">
+          {features.map((feature) => (
+            <div className="feature-item">
+              <div className="row align-items-center g-4">
+                <div className="col-12 col-lg-6">
                   <h3 className="text-white text-capitalize">
                     {feature.title}
                   </h3>
@@ -115,9 +98,16 @@ function Services() {
                     ))}
                   </ul>
                 </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+                <div className="col-12 col-lg-6">
+                  <img
+                    src={feature.image}
+                    alt={feature.title}
+                    className="img-fluid"
+                  />
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
 
