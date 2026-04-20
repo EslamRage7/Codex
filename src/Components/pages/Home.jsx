@@ -74,14 +74,14 @@ function Home() {
             className="col-12 col-lg-6 order-2 order-lg-1 home-content"
             data-aos="fade-right"
             data-aos-delay="50">
-            <h1 className="text-capitalize text-white mb-4">
+            <h1 className="text-capitalize text-white mb-4 ms-lg-5">
               building premium softwaare & design experiences .
             </h1>
-            <p className="text-capitalize text-white-50">
+            <p className="text-capitalize text-white-50 ms-lg-5">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               aliqua.
             </p>
-            <div className="btns-home">
+            <div className="btns-home ms-lg-5">
               <a href="#" className="btn btn-one px-3">
                 get started
               </a>
@@ -92,7 +92,7 @@ function Home() {
             </div>
           </div>
           <div
-            className="col-12 col-lg-6 order-1 order-lg-2 landing-image"
+            className="col-12 col-lg-6 order-1 order-lg-2 landing-image text-center"
             data-aos="fade-left"
             data-aos-delay="100">
             <img className="img-fluid" src={homeImage} alt="Codex" />

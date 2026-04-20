@@ -1,5 +1,5 @@
 .about .landing h1 {
-  font-weight: 700;
+  font-weight: 800;
   font-size: 40px;
   text-transform: capitalize;
   color: #fff;
@@ -14,6 +14,12 @@
 }
 
 /* Responsive Headlines */
+@media (min-width: 1200px) {
+  .about .landing h1 {
+    max-width: 750px;
+  }
+}
+
 @media (max-width: 1200px) {
   .about .landing h1 {
     font-size: 36px;

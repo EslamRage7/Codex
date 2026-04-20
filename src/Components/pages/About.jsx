@@ -1,5 +1,6 @@
 import Navbar from "../Navbar";
 import MainTitle from "../MainTitle";
+import Numbers from "../Numbers";
 
 import "../css/About.css";
 
@@ -19,7 +20,6 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import Numbers from "../Numbers";
 
 function About() {
   const mission = [
@@ -170,19 +170,19 @@ function About() {
         <Navbar />
 
         {/* landing */}
-        <div className="row landing align-items-center g-4 text-lg-start text-md-start text-center landing-row">
+        <div className="row landing align-items-center g-4 text-lg-start text-md-center text-center landing-row">
           <div
             className="col-12 col-lg-6 order-2 order-lg-1"
             data-aos="fade-right"
             data-aos-delay="50">
-            <h1 className="text-capitalize text-white mb-5 mb-lg-0 ">
+            <h1 className="text-capitalize text-white mb-5 mb-lg-0 ms-lg-5 ">
               <span>Codex</span> is a premium software and digital agency
               serving ambitious businesses in KSA & Egypt combining engineering,
               design, and strategy under one roof.
             </h1>
           </div>
           <div
-            className="col-12 col-lg-6 order-1 order-lg-2 landing-image"
+            className="col-12 col-lg-6 order-1 order-lg-2 landing-image text-center"
             data-aos="fade-left"
             data-aos-delay="100">
             <img className="img-fluid" src={aboutImage} alt="Codex" />
