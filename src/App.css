@@ -49,6 +49,10 @@ body {
   padding-bottom: 12px !important;
 }
 
+li::marker {
+  color: #8b5cf6;
+}
+
 .landing-row {
   padding-top: 28px;
   padding-bottom: 24px;

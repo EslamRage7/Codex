@@ -57,16 +57,6 @@
 
 /* Responsive Buttons */
 
-@media (min-width: 1200px) {
-  .home .landing h1 {
-    max-width: 750px;
-  }
-
-  .home .landing p {
-    max-width: 600px;
-  }
-}
-
 @media (max-width: 1200px) {
   .home .btns-home {
     gap: 18px;
@@ -76,19 +66,6 @@
   .btns-home .btn-two {
     font-size: 17px;
     padding: 11px 22px;
-  }
-}
-
-@media (max-width: 968px) {
-  .home .btns-home {
-    gap: 15px;
-    margin-top: 25px;
-  }
-
-  .btns-home .btn-one,
-  .btns-home .btn-two {
-    font-size: 16px;
-    padding: 11px 20px;
   }
 }
 
@@ -121,7 +98,7 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 360px) {
   .home .btns-home {
     gap: 8px;
     margin-top: 15px;
@@ -177,13 +154,16 @@
   background: linear-gradient(90deg, #3b82f621 0%, #8654f621 100%);
   border-radius: 36px;
   height: 230px;
-  padding: 20px 20px 20px 40px;
+  padding: 20px 20px 20px 50px;
   border-top: 1px solid #ffffff4a;
   border-bottom: 1px solid #ffffff4a;
   transition:
     transform 220ms ease,
     box-shadow 220ms ease,
     border-color 220ms ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .reason-card:hover {
@@ -192,30 +172,20 @@
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
 }
 
-.home .reason-card h3 {
+.home .reason-card li {
   position: relative;
   font-weight: 600;
   color: #d6d6d6;
   font-size: 36px;
   line-height: 1.15;
   text-decoration: underline;
-}
-
-.home .reason-card h3::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  left: -4%;
-  width: 23px;
-  height: 23px;
-  background: #8b5cf6;
-  border-radius: 50%;
+  margin: 0 0 10px 0;
 }
 
 .home .reason-card p {
   font-weight: 400;
   font-size: 20px;
+  margin: 0;
 }
 
 .home .Enterprise {
@@ -308,16 +278,18 @@
   }
 
   .home .reason-card {
-    height: 230px;
-    padding: 18px 18px 18px 36px;
+    height: 210px;
+    padding: 40px;
+    border-radius: 28px;
   }
 
-  .home .reason-card h3 {
-    font-size: 28px;
+  .home .reason-card li {
+    font-size: 26px;
+    margin-bottom: 8px;
   }
 
   .home .reason-card p {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .home .Enterprise {
@@ -344,70 +316,96 @@
   }
 }
 
-@media (max-width: 775.98px) {
-  .home .reason-card h3 {
-    font-size: 24px;
-  }
-
-  .home .reason-card h3::after {
-    left: -4%;
-    width: 20px;
-    height: 20px;
-  }
+.home .Enterprise {
+  margin-top: 42px;
+  text-align: center;
+  padding-bottom: 24px;
 }
 
-@media (max-width: 575.98px) {
+.home .Enterprise h1 {
+  font-size: 26px;
+}
+
+.home .Enterprise p {
+  font-size: 18px;
+}
+
+.home .Enterprise__image img {
+  max-height: 360px;
+}
+
+.home .Enterprise .btn-Enterprise {
+  font-size: 16px;
+  padding: 10px 16px;
+}
+
+@media (max-width: 768px) {
   .home .landing h1 {
-    font-size: 32px;
-  }
-
-  .home p {
-    font-size: 16px;
-  }
-
-  .home-image img {
-    max-height: 320px;
+    font-size: 36px;
   }
 
   .home .reason-card {
-    height: 185px;
-    padding: 16px 16px 16px 32px;
+    height: 190px;
+    padding: 35px;
+    border-radius: 24px;
   }
 
-  .home .reason-card h3::after {
-    left: -4%;
-    width: 16px;
-    height: 16px;
-  }
-
-  .home .reason-card .home .reason-card h3 {
+  .home .reason-card li {
     font-size: 22px;
   }
 
   .home .reason-card p {
-    font-size: 16px;
-  }
-
-  .home .Enterprise__image img {
-    max-height: 300px;
-  }
-
-  .home .Enterprise .btn-Enterprise {
     font-size: 14px;
-    padding: 8px 12px;
   }
-}
 
-@media (max-width: 768px) {
   .home .Enterprise .btn-Enterprise {
     font-size: 15px;
     padding: 9px 14px;
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 576px) {
+  .home .landing h1 {
+    font-size: 28px;
+  }
+
+  .home .reason-card {
+    height: 170px;
+    padding: 30px;
+    border-radius: 20px;
+  }
+
+  .home .reason-card li {
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
+
+  .home .reason-card p {
+    font-size: 12px;
+  }
+
   .home .Enterprise .btn-Enterprise {
     font-size: 12px;
-    padding: 7px 10px;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .home .landing h1 {
+    font-size: 24px;
+  }
+
+  .home .reason-card {
+    height: 150px;
+    padding: 30px;
+    border-radius: 16px;
+  }
+
+  .home .reason-card li {
+    font-size: 16px;
+  }
+
+  .home .reason-card p {
+    font-size: 11px;
   }
 }
