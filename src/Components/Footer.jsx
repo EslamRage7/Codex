@@ -1,23 +1,6 @@
 function Footer() {
   return (
     <footer className="footer">
-      <div className="accent-shape">
-        <svg
-          viewBox="0 0 160 200"
-          preserveAspectRatio="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M80 0 Q200 80 160 200 L160 0 Z"
-            fill="rgba(80,90,200,0.25)"
-          />
-          <path
-            d="M120 0 Q240 100 200 200 L160 200 Q200 100 160 0 Z"
-            fill="rgba(60,70,180,0.15)"
-          />
-        </svg>
-      </div>
-
       <div className="footer-main">
         <div className="footer-logo" data-aos="fade-up" data-aos-delay="0">
           CODEX

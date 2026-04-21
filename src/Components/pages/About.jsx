@@ -1,6 +1,7 @@
 import Navbar from "../Navbar";
 import MainTitle from "../MainTitle";
 import Numbers from "../Numbers";
+import Footer from "../Footer";
 
 import "../css/About.css";
 
@@ -12,8 +13,6 @@ import teamImage from "../../assets/team.png";
 import client1 from "../../assets/client1.png";
 import client2 from "../../assets/client2.png";
 import client3 from "../../assets/client3.png";
-
-import Footer from "../Footer";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";

@@ -130,47 +130,13 @@ li::marker {
 /* ===== FOOTER ===== */
 .footer {
   background: #080c18;
-  position: relative;
+  background-image: url("./assets/footer.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   overflow: hidden;
   padding: 60px 60px 24px;
-  font-family: inherit;
   animation: fadeInUp 0.8s ease-out;
-}
-
-.footer::before {
-  content: "";
-  position: absolute;
-  top: -80px;
-  left: -80px;
-  width: 400px;
-  height: 400px;
-  border-radius: 50%;
-  border: 60px solid rgba(80, 90, 180, 0.08);
-  pointer-events: none;
-  animation: orbitAnimation 20s linear infinite;
-}
-
-.footer::after {
-  content: "";
-  position: absolute;
-  top: -40px;
-  left: -40px;
-  width: 280px;
-  height: 280px;
-  border-radius: 50%;
-  border: 40px solid rgba(80, 90, 180, 0.06);
-  pointer-events: none;
-  animation: orbitAnimation 15s linear infinite reverse;
-}
-
-.accent-shape {
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 160px;
-  pointer-events: none;
-  animation: floatAnimation 6s ease-in-out infinite;
 }
 
 .footer-main {
@@ -201,7 +167,7 @@ li::marker {
 .footer-logo:hover {
   color: #5a7fff;
   transform: scale(1.05);
-  text-shadow: 0 0 20px rgba(90, 127, 255, 0.5);
+  text-shadow: 0 0 20px #5a7fff80;
 }
 
 .footer-tagline {
@@ -224,15 +190,15 @@ li::marker {
 .divider {
   width: 1px;
   height: 120px;
-  background: rgba(255, 255, 255, 0.15);
+  background: #ffffff26;
   margin: 0 40px;
   animation: fadeInUp 0.8s ease-out 0.3s both;
   transition: all 0.3s ease;
 }
 
 .divider:hover {
-  background: rgba(90, 127, 255, 0.4);
-  box-shadow: 0 0 15px rgba(90, 127, 255, 0.3);
+  background: #5a7fff66;
+  box-shadow: 0 0 15px #5a7fff4d;
 }
 
 .footer-side {
