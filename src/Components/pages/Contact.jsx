@@ -100,16 +100,85 @@ function Contact() {
           ))}
         </div>
 
+        {/* form */}
+        <MainTitle title="Let’s Work Together" />
+        <form>
+          <div className="row">
+            <div className="col-lg-6 col-md-6 col-12">
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="floatingInput"
+                  placeholder="Email address"
+                />
+                {/* <label for="floatingInput">Email address</label> */}
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="floatingInput"
+                  placeholder="name@example.com"
+                />
+                <label for="floatingInput">Email address</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="floatingInput"
+                  placeholder="name@example.com"
+                />
+                <label for="floatingInput">Email address</label>
+              </div>
+            </div>
+            <div className="col-lg-6 col-md-6 col-12">
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="floatingInput"
+                  placeholder="name@example.com"
+                />
+                <label for="floatingInput">Email address</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="floatingInput"
+                  placeholder="name@example.com"
+                />
+                <label for="floatingInput">Email address</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="floatingInput"
+                  placeholder="name@example.com"
+                />
+                <label for="floatingInput">Email address</label>
+              </div>
+            </div>
+          </div>
+        </form>
+
         {/* what happends */}
         <MainTitle title="What happens next?" />
         <div className="row">
           <div className="col-12">
-            <ul className="m-auto text-white">
-              <li>We review your message within 24 hours.</li>
-              <li>We ask a few clarifying questions (if needed).</li>
-              <li>You receive a clear proposal with timeline and cost.</li>
-              <li>We start with a kickoff call and a delivery roadmap.</li>
-            </ul>
+            <div className="row">
+              <div className="col-12 d-flex justify-content-center">
+                <ul className="text-white">
+                  <li>We review your message within 24 hours.</li>
+                  <li>We ask a few clarifying questions (if needed).</li>
+                  <li>You receive a clear proposal with timeline and cost.</li>
+                  <li>We start with a kickoff call and a delivery roadmap.</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
 
