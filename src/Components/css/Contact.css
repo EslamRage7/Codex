@@ -189,16 +189,69 @@
   border-bottom: 1px solid #ffffff4a;
 }
 
-.contact input {
+.contact .form-floating > .form-control,
+.contact .form-floating > .form-control:focus,
+.contact .form-floating > .form-control:not(:placeholder-shown),
+.contact .form-floating > .form-control-plaintext,
+.contact .form-floating > .form-select,
+.contact .form-floating > textarea.form-control {
   background-color: #8b5cf61c;
+  color: #fff;
   border-top: 1px solid #ffffff4a;
   border-bottom: 1px solid #ffffff4a;
-  border-right: 1px solid #ffffff00;
-  border-left: 1px solid #ffffff00;
+  border-right: 1px solid transparent;
+  border-left: 1px solid transparent;
   border-radius: 13px;
+  box-shadow: none;
 }
 
-::placeholder,
-label {
-  color: white !important;
+.contact .form-floating > .form-control {
+  min-height: 58px;
+}
+
+.contact .form-floating > textarea.form-control {
+  min-height: 148px;
+  padding-top: 1.75rem;
+  padding-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+.contact .form-floating > .form-control::placeholder,
+.contact .form-floating > textarea.form-control::placeholder {
+  color: #fff !important;
+  opacity: 1;
+}
+
+.contact .form-floating > label {
+  color: #fff !important;
+}
+
+.contact .form-floating > textarea.form-control::placeholder {
+  color: #fff !important;
+  opacity: 1;
+}
+
+.contact .form-floating > textarea.form-control:not(:focus)::placeholder {
+  opacity: 0;
+}
+
+.contact .form-floating > textarea.form-control:focus::placeholder {
+  opacity: 1;
+}
+
+.contact .form-floating > .form-control:focus,
+.contact .form-floating > textarea.form-control:focus {
+  border-color: #a78bfa;
+  box-shadow: 0 0 0 0.2rem #8b5cf62e;
+}
+
+.contact .form-floating > .form-control:focus ~ label,
+.contact .form-floating > .form-control:not(:placeholder-shown) ~ label,
+.contact .form-floating > textarea.form-control:focus ~ label,
+.contact
+  .form-floating
+  > textarea.form-control:not(:placeholder-shown)
+  ~ label {
+  color: #fff !important;
+  opacity: 1;
 }

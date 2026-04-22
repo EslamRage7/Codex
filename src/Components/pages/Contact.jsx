@@ -105,61 +105,74 @@ function Contact() {
         <form>
           <div className="row">
             <div className="col-lg-6 col-md-6 col-12">
-              <div class="form-floating mb-3">
+              <div className="form-floating mb-4">
                 <input
-                  type="email"
-                  class="form-control"
-                  id="floatingInput"
-                  placeholder="Email address"
+                  type="text"
+                  className="form-control"
+                  id="floatingName"
+                  placeholder=""
                 />
-                {/* <label for="floatingInput">Email address</label> */}
+                <label htmlFor="floatingName">Your Name</label>
               </div>
-              <div class="form-floating mb-3">
+              <div className="form-floating mb-4">
                 <input
                   type="email"
-                  class="form-control"
-                  id="floatingInput"
-                  placeholder="name@example.com"
+                  className="form-control"
+                  id="floatingEmail"
+                  placeholder=""
                 />
-                <label for="floatingInput">Email address</label>
+                <label htmlFor="floatingEmail">Email Address</label>
               </div>
-              <div class="form-floating mb-3">
+              <div className="form-floating mb-4">
                 <input
-                  type="email"
-                  class="form-control"
-                  id="floatingInput"
-                  placeholder="name@example.com"
+                  type="tel"
+                  className="form-control"
+                  id="floatingPhone"
+                  placeholder=""
                 />
-                <label for="floatingInput">Email address</label>
+                <label htmlFor="floatingPhone">Phone Number</label>
               </div>
             </div>
+
             <div className="col-lg-6 col-md-6 col-12">
-              <div class="form-floating mb-3">
+              <div className="form-floating mb-4">
                 <input
-                  type="email"
-                  class="form-control"
-                  id="floatingInput"
-                  placeholder="name@example.com"
+                  type="text"
+                  className="form-control"
+                  id="floatingCompany"
+                  placeholder=""
                 />
-                <label for="floatingInput">Email address</label>
+                <label htmlFor="floatingCompany">Company Name</label>
               </div>
-              <div class="form-floating mb-3">
+              <div className="form-floating mb-4">
                 <input
-                  type="email"
-                  class="form-control"
-                  id="floatingInput"
-                  placeholder="name@example.com"
+                  type="text"
+                  className="form-control"
+                  id="floatingBudget"
+                  placeholder=""
                 />
-                <label for="floatingInput">Email address</label>
+                <label htmlFor="floatingBudget">Project Budget</label>
               </div>
-              <div class="form-floating mb-3">
+              <div className="form-floating mb-4">
                 <input
-                  type="email"
-                  class="form-control"
-                  id="floatingInput"
-                  placeholder="name@example.com"
+                  type="text"
+                  className="form-control"
+                  id="floatingBudget"
+                  placeholder=""
                 />
-                <label for="floatingInput">Email address</label>
+                <label htmlFor="floatingBudget">Project Budget</label>
+              </div>
+            </div>
+
+            <div className="col-lg-12">
+              <div className="form-floating mb-4">
+                <textarea
+                  className="form-control"
+                  id="floatingMessage"
+                  placeholder="Tell us about your project"
+                  style={{ height: "148px" }}
+                />
+                <label htmlFor="floatingMessage"> Project Details</label>
               </div>
             </div>
           </div>
