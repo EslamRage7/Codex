@@ -47,8 +47,7 @@ function Contact() {
           <div
             className="col-12 col-lg-6 order-2 order-lg-1 home-content"
             data-aos="fade-right"
-            data-aos-delay="50"
-          >
+            data-aos-delay="50">
             <h1 className="text-capitalize text-white mb-4 ms-lg-5">
               Let’s Talk About Your Next Project.
             </h1>
@@ -69,8 +68,7 @@ function Contact() {
           <div
             className="col-12 col-lg-6 order-1 order-lg-2 landing-image text-center"
             data-aos="fade-left"
-            data-aos-delay="100"
-          >
+            data-aos-delay="100">
             <img className="img-fluid" src={contactImage} alt="Codex" />
           </div>
         </div>
@@ -93,8 +91,7 @@ function Contact() {
                 <div className="btns-home text-center m-auto">
                   <a
                     href={item.link}
-                    className="btn text-center m-auto btn-one px-3"
-                  >
+                    className="btn text-center m-auto btn-one px-3">
                     {item.show}
                   </a>
                 </div>
@@ -120,7 +117,7 @@ function Contact() {
         <div className="map my-5">
           <div className="row">
             <div className="col-12">
-              <img className="img-fluid" src={map} alt="map" />
+              <img className="img-fluid w-100 h-100" src={map} alt="map" />
             </div>
           </div>
         </div>
