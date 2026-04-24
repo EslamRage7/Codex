@@ -1,0 +1,181 @@
+.site-preloader {
+  --preloader-stage-size: clamp(110px, 24vw, 160px);
+  --preloader-inner-size: clamp(86px, 18vw, 122px);
+  --preloader-core-size: clamp(64px, 13vw, 92px);
+  --preloader-gap: clamp(14px, 3vw, 20px);
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  gap: var(--preloader-gap);
+  padding: clamp(16px, 4vw, 28px);
+  overflow: hidden;
+  background:
+    radial-gradient(120% 100% at 15% 8%, rgba(59, 130, 246, 0.24), transparent 52%),
+    radial-gradient(90% 90% at 86% 18%, rgba(134, 84, 246, 0.2), transparent 58%),
+    linear-gradient(180deg, #0d1537 0%, #0a112e 58%, #080d24 100%);
+}
+
+.site-preloader__glow {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(clamp(18px, 4vw, 28px));
+  opacity: 0.65;
+  animation: preloaderFloat 4.2s ease-in-out infinite;
+}
+
+.site-preloader__glow--one {
+  width: clamp(140px, 28vw, 260px);
+  height: clamp(140px, 28vw, 260px);
+  top: 12%;
+  left: 9%;
+  background: rgba(59, 130, 246, 0.58);
+}
+
+.site-preloader__glow--two {
+  width: clamp(120px, 24vw, 220px);
+  height: clamp(120px, 24vw, 220px);
+  bottom: 14%;
+  right: 10%;
+  background: rgba(134, 84, 246, 0.52);
+  animation-delay: -1.9s;
+}
+
+.site-preloader__stage {
+  position: relative;
+  width: var(--preloader-stage-size);
+  height: var(--preloader-stage-size);
+  display: grid;
+  place-items: center;
+}
+
+.site-preloader__ring {
+  position: absolute;
+  width: var(--preloader-stage-size);
+  height: var(--preloader-stage-size);
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    rgba(59, 130, 246, 0.1),
+    rgba(59, 130, 246, 0.88),
+    rgba(134, 84, 246, 0.92),
+    rgba(59, 130, 246, 0.1)
+  );
+  mask: radial-gradient(farthest-side, transparent calc(100% - 7px), #fff 0);
+  animation: preloaderSpin 1.35s linear infinite;
+}
+
+.site-preloader__ring--inner {
+  width: var(--preloader-inner-size);
+  height: var(--preloader-inner-size);
+  animation-direction: reverse;
+  animation-duration: 2.1s;
+  opacity: 0.8;
+  filter: brightness(1.1);
+}
+
+.site-preloader__core {
+  width: var(--preloader-core-size);
+  height: var(--preloader-core-size);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  background: linear-gradient(145deg, rgba(11, 21, 56, 0.95), rgba(18, 35, 86, 0.95));
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow:
+    0 0 0 6px rgba(255, 255, 255, 0.04),
+    0 18px 34px rgba(0, 0, 0, 0.44);
+  animation: preloaderPulse 2.2s ease-in-out infinite;
+}
+
+.site-preloader__core span {
+  font-size: clamp(12px, 2.5vw, 16px);
+}
+
+.site-preloader__text {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: clamp(11px, 2.3vw, 15px);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@keyframes preloaderSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes preloaderPulse {
+  0%,
+  100% {
+    transform: scale(0.98);
+    box-shadow:
+      0 0 0 6px rgba(255, 255, 255, 0.04),
+      0 18px 34px rgba(0, 0, 0, 0.44);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow:
+      0 0 0 8px rgba(59, 130, 246, 0.18),
+      0 20px 40px rgba(0, 0, 0, 0.46);
+  }
+}
+
+@keyframes preloaderFloat {
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(-12px) translateX(7px);
+  }
+}
+
+@media (max-width: 575.98px) {
+  .site-preloader {
+    --preloader-stage-size: 130px;
+    --preloader-inner-size: 100px;
+    --preloader-core-size: 76px;
+  }
+}
+
+@media (max-height: 700px) {
+  .site-preloader {
+    --preloader-stage-size: 126px;
+    --preloader-inner-size: 96px;
+    --preloader-core-size: 72px;
+  }
+
+  .site-preloader__text {
+    font-size: 12px;
+    letter-spacing: 0.06em;
+  }
+}
+
+@media (max-width: 390px), (max-height: 580px) {
+  .site-preloader {
+    --preloader-stage-size: 112px;
+    --preloader-inner-size: 86px;
+    --preloader-core-size: 64px;
+    --preloader-gap: 12px;
+  }
+
+  .site-preloader__text {
+    font-size: 11px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-preloader__ring,
+  .site-preloader__ring--inner,
+  .site-preloader__core,
+  .site-preloader__glow {
+    animation: none;
+  }
+}

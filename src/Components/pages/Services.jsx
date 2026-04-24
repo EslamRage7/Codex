@@ -1,4 +1,4 @@
-import Navbar from "../Navbar";
+﻿import Navbar from "../Navbar";
 import MainTitle from "../MainTitle";
 import Footer from "../Footer";
 
@@ -12,66 +12,36 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-
-const features = [
-  {
-    id: 1,
-    image: featureImage,
-    title: "Custom Software & Mobile App Development",
-    description: [
-      "Enterprise Web Applications",
-      "Native & Hybrid Mobile Apps",
-      "API Development & Integration",
-      "Cloud Architecture & DevOps",
-    ],
-  },
-  {
-    id: 2,
-    image: featureImage,
-    title: "UI/UX & Product Design",
-    description: [
-      "User Research & Wireframing",
-      "Interactive Prototyping",
-      "Design Systems Architecture",
-      "Usability Testing",
-    ],
-  },
-  {
-    id: 3,
-    image: featureImage,
-    title: "Premium Brand Identity System",
-    description: [
-      "Brand Strategy & Positioning",
-      "Logo & Visual Guidelines",
-      "Corporate Collaterals",
-      "Motion Graphics & 3D Assets",
-    ],
-  },
-];
+import { useLanguage } from "../../context/LanguageContext";
 
 function Services() {
+  const { t } = useLanguage();
+
+  const features = t.services.features.map((feature) => ({
+    ...feature,
+    image: featureImage,
+  }));
+
   return (
     <div className="services">
       <div className="container">
         <Navbar />
 
-        {/* landing */}
-        <div className="row landing align-items-center g-4 text-lg-start text-md-center text-center landing-row">
+        <div className="row mx-lg-4 mx-md-4 mx-sm-3 mx-0 landing align-items-center g-4 text-lg-start text-md-center text-center landing-row">
           <div
-            className="col-12 col-lg-6 order-2 order-lg-1"
+            className="col-12 col-lg-6 order-2 order-lg-1  text-lg-start text-center"
             data-aos="fade-right"
             data-aos-delay="50"
           >
-            <h1 className="text-capitalize text-white mb-4 ms-lg-5">
-              Our Expertise
+            <h1 className="text-capitalize text-white mb-4">
+              {t.services.landing.title}
             </h1>
 
-            <h3 className="text-capitalize text-white-50 ms-lg-5 ps-lg-3">
-              Transforming Ideas Into Scalable Digital Realities. From
-              enterprise software engineering to award-winning brand identities.
-              We provide end-to-end solutions that drive real business growth.
+            <h3 className="text-capitalize text-white-50 ps-lg-3">
+              {t.services.landing.description}
             </h3>
           </div>
+
           <div
             className="col-12 col-lg-6 order-1 order-lg-2 landing-image text-center"
             data-aos="fade-left"
@@ -81,8 +51,44 @@ function Services() {
           </div>
         </div>
 
-        {/* Horizontal Timeline */}
-        <MainTitle title="Horizontal Timeline" />
+        <MainTitle title={t.services.timelineTitle} />
+        <div className="row mx-lg-4 mx-md-4 mx-sm-3 mx-0 g-4 mb-4 text-center timeline-grid">
+          {t.services.firstTimeline.map((card, index) => (
+            <div
+              key={card.id}
+              className="col-lg-3 col-12 text-capitalize timeline-card"
+            >
+              <div className="item">
+                <h3 className="text-white mb-4">{card.title}</h3>
+                <p className="text-white-50">{card.description}</p>
+              </div>
+
+              {index !== t.services.firstTimeline.length - 1 ? (
+                <div className="line text-white"></div>
+              ) : (
+                <div className="line-bot text-white"></div>
+              )}
+            </div>
+          ))}
+        </div>
+
+        <div className="row mx-lg-4 mx-md-4 mx-sm-3 mx-0 g-4 mb-5 pb-5 flex-row-reverse text-center timeline-grid">
+          {t.services.secondTimeline.map((card, index) => (
+            <div
+              key={card.id}
+              className="col-lg-3 col-12 text-capitalize timeline-card"
+            >
+              <div className="item">
+                <h3 className="text-white mb-4">{card.title}</h3>
+                <p className="text-white-50">{card.description}</p>
+              </div>
+
+              {index !== t.services.firstTimeline.length - 1 && (
+                <div className="second-line text-white"></div>
+              )}
+            </div>
+          ))}
+        </div>
 
         <div data-aos="fade-up" data-aos-delay="100">
           <Swiper

@@ -456,3 +456,28 @@ li::marker {
     font-size: 11px;
   }
 }
+
+html[dir="rtl"] body {
+  font-family:
+    "Cairo",
+    "Montserrat",
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+}
+
+html[dir="rtl"] .text-start,
+html[dir="rtl"] .text-lg-start,
+html[dir="rtl"] .text-md-start {
+  text-align: right !important;
+}
+
+html[dir="rtl"] .text-end,
+html[dir="rtl"] .text-lg-end,
+html[dir="rtl"] .text-md-end {
+  text-align: left !important;
+}

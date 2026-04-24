@@ -1,8 +1,12 @@
 import "./css/Navbar.css";
 import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { useLanguage } from "../context/LanguageContext";
+import egyptFlag from "../assets/flag-eg.svg";
+import gbFlag from "../assets/flag-gb.svg";
 
 function Navbar() {
+  const { t, isArabic, toggleLanguage } = useLanguage();
   const navLinkClass = ({ isActive }) =>
     isActive ? "nav-link active" : "nav-link";
 
@@ -36,7 +40,7 @@ function Navbar() {
           data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
-          aria-label="Toggle navigation"
+          aria-label={t.navbar.menuLabel}
         >
           <span className="nav-toggler" aria-hidden="true">
             <span className="nav-toggler__bar" />
@@ -48,28 +52,46 @@ function Navbar() {
           <ul className="navbar-nav m-auto">
             <li className="nav-item">
               <NavLink className={navLinkClass} to="/" end>
-                Home
+                {t.navbar.home}
               </NavLink>
             </li>
             <li className="nav-item">
               <NavLink className={navLinkClass} to="/about">
-                About
+                {t.navbar.about}
               </NavLink>
             </li>
             <li className="nav-item">
               <NavLink className={navLinkClass} to="/services">
-                services
+                {t.navbar.services}
               </NavLink>
             </li>
             <li className="nav-item">
               <NavLink className={navLinkClass} to="/contact">
-                contact
+                {t.navbar.contact}
               </NavLink>
             </li>
           </ul>
-          <Link className="btn btn-nav" to="/">
-            get started
-          </Link>
+          <div className="nav-actions">
+            <button
+              type="button"
+              className="btn btn-nav btn-lang"
+              onClick={toggleLanguage}
+              aria-label={t.navbar.toggleLabel}
+            >
+              <span className={isArabic ? "ms-2" : "me-2"}>
+                {isArabic ? "EN" : "AR"}
+              </span>
+              <img
+                src={isArabic ? gbFlag : egyptFlag}
+                alt={isArabic ? "United Kingdom flag" : "Egypt flag"}
+                className="lang-flag"
+              />
+              <span className="visually-hidden">{t.navbar.toggle}</span>
+            </button>
+            <Link className="btn btn-nav" to="/">
+              {t.navbar.getStarted}
+            </Link>
+          </div>
         </div>
       </div>
     </nav>
