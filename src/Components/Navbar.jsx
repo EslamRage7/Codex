@@ -13,6 +13,7 @@ function Navbar() {
   const { t, isArabic, setLanguage } = useLanguage();
   const navLinkClass = ({ isActive }) =>
     isActive ? "nav-link active" : "nav-link";
+  const currentLanguageLabel = isArabic ? "AR" : "En";
 
   const [isScrolled, setIsScrolled] = useState(false);
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
@@ -104,8 +105,8 @@ function Navbar() {
                 aria-expanded={isLanguageOpen}
                 aria-haspopup="menu">
                 <FaGlobeAfrica className="lang-globe" aria-hidden="true" />
-                <span className={`lang-code ${isArabic ? `me-2` : `ms-2`}`}>
-                  {t.navbar.languageLabel} ↓
+                <span className={`lang-code ${isArabic ? "me-2" : "ms-2"}`}>
+                  {currentLanguageLabel} ↓
                 </span>
               </button>
 
@@ -118,10 +119,10 @@ function Navbar() {
                   onClick={() => handleLanguageChange("ar")}
                   role="menuitem">
                   <img src={egyptFlag} alt="Egypt flag" className="lang-flag" />
-                  <span>العربي</span>
+                  <span>AR</span>
                 </button>
                 <button
-                  type="button "
+                  type="button"
                   className={`lang-option mt-2 ${!isArabic ? "is-active" : ""}`}
                   onClick={() => handleLanguageChange("en")}
                   role="menuitem">
@@ -130,7 +131,7 @@ function Navbar() {
                     alt="United Kingdom flag"
                     className="lang-flag"
                   />
-                  <span>English</span>
+                  <span>En</span>
                 </button>
               </div>
             </div>
