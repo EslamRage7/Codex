@@ -104,7 +104,9 @@ function Navbar() {
                 aria-expanded={isLanguageOpen}
                 aria-haspopup="menu">
                 <FaGlobeAfrica className="lang-globe" aria-hidden="true" />
-                <span className="lang-code">{t.navbar.languageLabel} ↓</span>
+                <span className={`lang-code ${isArabic ? `me-2` : `ms-2`}`}>
+                  {t.navbar.languageLabel} ↓
+                </span>
               </button>
 
               <div
