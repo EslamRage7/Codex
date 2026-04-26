@@ -18,10 +18,9 @@
 }
 
 .navbar.navbar--scrolled {
-  background: #3a488600;
-
-  backdrop-filter: blur(13px) !important;
-  -webkit-backdrop-filter: blur(13px) !important;
+  background: #0a112edb;
+  backdrop-filter: blur(13px);
+  -webkit-backdrop-filter: blur(13px);
   box-shadow: 0 12px 40px #00000073;
   border-top-color: #ffffff1f;
   border-bottom-color: #ffffff1f;
