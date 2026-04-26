@@ -152,7 +152,7 @@ li::marker {
   animation: fadeInUp 0.8s ease-out 0.1s both;
 }
 
-.footer-logo {
+.footer-logo a {
   font-weight: 700;
   font-size: 50px;
   line-height: 100%;
@@ -164,7 +164,7 @@ li::marker {
   cursor: pointer;
 }
 
-.footer-logo:hover {
+.footer-logo a:hover {
   color: #5a7fff;
   transform: scale(1.05);
   text-shadow: 0 0 20px #5a7fff80;

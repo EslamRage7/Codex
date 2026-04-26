@@ -1,17 +1,37 @@
-﻿import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useLanguage } from "../context/LanguageContext";
 
 function Footer() {
   const { t } = useLanguage();
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleLogoClick = (event) => {
+    if (location.pathname === "/") {
+      event.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+
+    navigate("/");
+  };
 
   return (
     <footer className="footer">
       <div className="footer-main">
         <div className="footer-logo" data-aos="fade-up" data-aos-delay="0">
-          CODEX
+          <Link
+            to="/"
+            className="text-decoration-none"
+            onClick={handleLogoClick}>
+            CODEX
+          </Link>
         </div>
 
-        <div className="footer-tagline" data-aos="fade-up" data-aos-delay="100">
+        <div
+          className="footer-tagline"
+          data-aos="fade-up"
+          data-aos-delay="100">
           {t.footer.tagline}
         </div>
         <div className="divider" />
@@ -39,4 +59,5 @@ function Footer() {
     </footer>
   );
 }
+
 export default Footer;
