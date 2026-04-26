@@ -192,13 +192,13 @@
 .timeline-left .timeline-arrow {
   transform: scaleX(-1);
   position: relative;
-  right: 3%;
+  right: 2%;
 }
 
 .timeline-right .timeline-arrow {
   flex-direction: row;
   position: relative;
-  left: 3%;
+  left: 2%;
 }
 
 .timeline-content {
@@ -233,16 +233,42 @@
   text-transform: capitalize;
 }
 
-@media (max-width: 968px) {
+@media (max-width: 1250px) {
   .timeline-left .timeline-arrow {
     transform: scaleX(-1);
     position: relative;
-    right: 5%;
+    right: 2%;
   }
   .timeline-right .timeline-arrow {
     flex-direction: row;
     position: relative;
-    left: 5%;
+    left: 2%;
+  }
+}
+
+@media (max-width: 1150px) {
+  .timeline-left .timeline-arrow {
+    transform: scaleX(-1);
+    position: relative;
+    right: 3%;
+  }
+  .timeline-right .timeline-arrow {
+    flex-direction: row;
+    position: relative;
+    left: 3%;
+  }
+}
+
+@media (max-width: 968px) {
+  .timeline-left .timeline-arrow {
+    transform: scaleX(-1);
+    position: relative;
+    right: 4%;
+  }
+  .timeline-right .timeline-arrow {
+    flex-direction: row;
+    position: relative;
+    left: 4%;
   }
 }
 

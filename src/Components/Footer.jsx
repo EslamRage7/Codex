@@ -1,4 +1,5 @@
-﻿import { useLanguage } from "../context/LanguageContext";
+﻿import { Link } from "react-router-dom";
+import { useLanguage } from "../context/LanguageContext";
 
 function Footer() {
   const { t } = useLanguage();
@@ -16,13 +17,17 @@ function Footer() {
         <div className="divider" />
         <div className="footer-side" data-aos="fade-up" data-aos-delay="200">
           <nav className="footer-nav">
-            <a href="#">{t.footer.links.home}</a>
-            <a href="#">{t.footer.links.services}</a>
-            <a href="#">{t.footer.links.portfolio}</a>
-            <a href="#">{t.footer.links.contact}</a>
+            <Link to="/">{t.footer.links.home}</Link>
+            <Link to="/services">{t.footer.links.services}</Link>
+            <Link to="/portfolio">{t.footer.links.portfolio}</Link>
+            <Link to="/contact">{t.footer.links.contact}</Link>
           </nav>
           <div className="footer-contact">
-            <span className="footer-email">{t.footer.email}</span>
+            <a
+              href="mailto:eslamrageh41@gmail.com"
+              className="footer-email text-decoration-none">
+              {t.footer.email}
+            </a>
             <span>{t.footer.location}</span>
           </div>
         </div>
@@ -35,4 +40,3 @@ function Footer() {
   );
 }
 export default Footer;
-

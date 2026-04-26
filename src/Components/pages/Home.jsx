@@ -9,6 +9,7 @@ import homeImage from "../../assets/home-image.png";
 import devImage from "../../assets/devImage.png";
 import mac from "../../assets/mac.png";
 import { useLanguage } from "../../context/LanguageContext";
+import { Link } from "react-router-dom";
 
 function Home() {
   const { t } = useLanguage();
@@ -21,6 +22,7 @@ function Home() {
     <div className="home">
       <div className="container">
         <Navbar />
+
         {/* landing */}
         <div className="row mx-lg-4 mx-md-4 mx-sm-3 mx-0 landing align-items-center g-4 landing-row">
           <div
@@ -34,13 +36,13 @@ function Home() {
               {t.home.landing.description}
             </p>
             <div className="btns-home ms-lg-3 ms-md-3">
-              <a href="#" className="btn btn-one px-3">
+              <Link to="/about" className="btn btn-one px-3">
                 {t.home.landing.primaryButton}
-              </a>
+              </Link>
 
-              <a href="#" className="btn btn-two px-3">
+              <Link to="/about" className="btn btn-two px-3">
                 {t.home.landing.secondaryButton}
-              </a>
+              </Link>
             </div>
           </div>
           <div
@@ -62,13 +64,15 @@ function Home() {
                 data-aos-delay={index * 150}
                 data-aos-duration="700">
                 <div className="service-card text-center">
-                  <img src={service.image} alt={service.title} />
-                  <h3 className="text-white text-capitalize mt-4">
-                    {service.title}
-                  </h3>
-                  <p className="text-white-50 text-capitalize">
-                    {service.description}
-                  </p>
+                  <Link to="/services" className="text-decoration-none">
+                    <img src={service.image} alt={service.title} />
+                    <h3 className="text-white text-capitalize mt-4">
+                      {service.title}
+                    </h3>
+                    <p className="text-white-50 text-capitalize">
+                      {service.description}
+                    </p>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -111,12 +115,13 @@ function Home() {
               {t.home.caseStudy.description}
             </p>
 
-            <a href="#" className="btn btn-Enterprise px-3">
+            <Link to="/contact" className="btn btn-Enterprise px-3">
               {t.home.caseStudy.button}
-            </a>
+            </Link>
           </div>
         </div>
       </div>
+
       <Footer />
     </div>
   );

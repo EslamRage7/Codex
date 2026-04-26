@@ -19,25 +19,25 @@ import callImage from "../../assets/call.png";
 import map from "../../assets/map.png";
 import { useLanguage } from "../../context/LanguageContext";
 
-const initialFormData = {
-  fullName: "",
-  email: "",
-  service: "",
-  companyName: "",
-  phone: "",
-  message: "",
-  privacyAccepted: false,
-};
-
-const serviceValues = [
-  "Graphic Design",
-  "Web Development",
-  "App Development",
-  "Digital Marketing",
-  "SEO",
-];
-
 function Contact() {
+  const initialFormData = {
+    fullName: "",
+    email: "",
+    service: "",
+    companyName: "",
+    phone: "",
+    message: "",
+    privacyAccepted: false,
+  };
+
+  const serviceValues = [
+    "Graphic Design",
+    "Web Development",
+    "App Development",
+    "Digital Marketing",
+    "SEO",
+  ];
+
   const { t } = useLanguage();
   const form = useRef(null);
   const [formData, setFormData] = useState(initialFormData);
@@ -52,7 +52,7 @@ function Contact() {
       title: t.contact.social[0].title,
       description: t.contact.social[0].description,
       show: t.contact.social[0].show,
-      link: "#",
+      link: "#form",
     },
     {
       id: 2,
@@ -60,7 +60,7 @@ function Contact() {
       title: t.contact.social[1].title,
       description: t.contact.social[1].description,
       show: t.contact.social[1].show,
-      link: "mailto:info@codex.com",
+      link: "mailto:eslamrageh41@gmail.com",
     },
     {
       id: 3,
@@ -68,7 +68,7 @@ function Contact() {
       title: t.contact.social[2].title,
       description: t.contact.social[2].description,
       show: t.contact.social[2].show,
-      link: "https://wa.me/+20 10 10225976",
+      link: "https://wa.me/+201010225976",
     },
   ];
 
@@ -238,6 +238,7 @@ function Contact() {
     <div className="contact">
       <div className="container">
         <Navbar />
+
         {/* landing */}
         <div className="row mx-lg-4 mx-md-4 mx-sm-3 mx-0 landing align-items-center g-4 landing-row">
           <div
@@ -251,11 +252,11 @@ function Contact() {
               {t.contact.landing.description}
             </p>
             <div className="btns-home ms-lg-3 ms-md-3">
-              <a href="#" className="btn btn-one px-3">
+              <a href="#form" className="btn btn-one px-3">
                 {t.contact.landing.primaryButton}
               </a>
 
-              <a href="#" className="btn btn-two px-3">
+              <a href="#form" className="btn btn-two px-3">
                 {t.contact.landing.secondaryButton}
               </a>
             </div>
@@ -304,6 +305,7 @@ function Contact() {
         {/* form */}
         <MainTitle title={t.contact.formTitle} />
         <form
+          id="form"
           ref={form}
           onSubmit={sendEmail}
           className="mx-lg-4 mx-md-4 mx-sm-3 mx-0 py-5"

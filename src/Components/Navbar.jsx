@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
 import { FaGlobeAfrica } from "react-icons/fa";
+import { IoMdArrowDropdown } from "react-icons/io";
 
 import { useLanguage } from "../context/LanguageContext";
 
@@ -106,7 +107,7 @@ function Navbar() {
                 aria-haspopup="menu">
                 <FaGlobeAfrica className="lang-globe" aria-hidden="true" />
                 <span className={`lang-code ${isArabic ? "me-2" : "ms-2"}`}>
-                  {currentLanguageLabel} ↓
+                  {currentLanguageLabel} <IoMdArrowDropdown />
                 </span>
               </button>
 

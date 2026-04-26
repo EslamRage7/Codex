@@ -51,6 +51,10 @@ function App() {
   }, []);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
+  useEffect(() => {
     if (window.AOS && typeof window.AOS.refreshHard === "function") {
       window.AOS.refreshHard();
     } else if (window.AOS && typeof window.AOS.refresh === "function") {

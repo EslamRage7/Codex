@@ -20,6 +20,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { useLanguage } from "../../context/LanguageContext";
+import { Link } from "react-router-dom";
 
 function About() {
   const { t } = useLanguage();
@@ -61,6 +62,7 @@ function About() {
       <div className="container">
         <Navbar />
 
+        {/* landing */}
         <div className="row mx-lg-4 mx-md-4 mx-sm-3 mx-0 landing align-items-center g-4 text-lg-start text-md-center text-center landing-row">
           <div
             className="col-12 col-lg-6 order-2 order-lg-1"
@@ -82,14 +84,15 @@ function About() {
           className="btns-home text-center mb-5"
           data-aos="fade-up"
           data-aos-delay="200">
-          <a href="#" className="btn btn-one px-3 me-3">
+          <Link to="/contact" className="btn btn-one px-3 me-3">
             {t.about.consultationButton}
-          </a>
-          <a href="#" className="btn btn-two me-3 px-3">
+          </Link>
+          <a href="#team" className="btn btn-two me-3 px-3">
             {t.about.viewButton}
           </a>
         </div>
 
+        {/* mission */}
         <div className="row mx-lg-4 mx-md-4 mx-sm-3 mx-0 justify-content-center g-4 mt-5">
           {mission.map((item, index) => (
             <div
@@ -114,9 +117,11 @@ function About() {
           ))}
         </div>
 
+        {/* numbers */}
         <MainTitle title={t.about.numbersTitle} />
         <Numbers />
 
+        {/* timeline */}
         <MainTitle title={t.about.storyTitle} />
         <div className="timeline-section mb-5">
           <div className="timeline-line"></div>
@@ -137,6 +142,7 @@ function About() {
           ))}
         </div>
 
+        {/* stand for */}
         <MainTitle title={t.about.standForTitle} />
         <div className="row mx-lg-4 mx-md-4 mx-sm-3 mx-0 g-4 mb-5 pb-5">
           {standFor.map((item, index) => (
@@ -158,8 +164,11 @@ function About() {
           ))}
         </div>
 
+        {/* team */}
         <MainTitle title={t.about.teamTitle} />
-        <div className="row mx-lg-4 mx-md-4 mx-sm-3 mx-0 g-4 mb-5 pb-5">
+        <div
+          className="row mx-lg-4 mx-md-4 mx-sm-3 mx-0 g-4 mb-5 pb-5"
+          id="team">
           {team.map((member, index) => (
             <div
               key={member.id}
@@ -184,6 +193,7 @@ function About() {
           ))}
         </div>
 
+        {/* What Clients Say */}
         <MainTitle title={t.about.clientsTitle} />
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
@@ -223,18 +233,22 @@ function About() {
           ))}
         </Swiper>
 
+        {/* Ready to build something exceptional? */}
         <div className="row align-items-center justify-content-between g-4 my-5 sub-client text-white">
           <div className="col-lg-7 col-md-7 col-12 text-center text-lg-start">
-            <p className="mb-2">{t.about.cta.title}</p>
-            <p className="mb-0">{t.about.cta.description}</p>
+            <Link to="/contact" className="text-decoration-none text-white">
+              <p className="mb-2">{t.about.cta.title}</p>
+              <p className="mb-0">{t.about.cta.description}</p>
+            </Link>
           </div>
           <div className="col-lg-5 col-md-5 col-12 text-center text-lg-end">
-            <a href="#" className="btn text-white px-4">
+            <Link to="/contact" className="btn text-white px-4">
               {t.about.cta.button}
-            </a>
+            </Link>
           </div>
         </div>
       </div>
+
       <Footer />
     </div>
   );

@@ -2,7 +2,7 @@
   "hash": "11fd3b18",
   "configHash": "670424c3",
   "lockfileHash": "7560287b",
-  "browserHash": "f9a7961b",
+  "browserHash": "6cf3fb13",
   "optimized": {
     "@emailjs/browser": {
       "src": "../../node_modules/@emailjs/browser/es/index.js",
@@ -13,19 +13,19 @@
     "@emotion/react": {
       "src": "../../node_modules/@emotion/react/dist/emotion-react.browser.development.esm.js",
       "file": "@emotion_react.js",
-      "fileHash": "55e7ed1e",
+      "fileHash": "31f59f56",
       "needsInterop": false
     },
     "@emotion/styled": {
       "src": "../../node_modules/@emotion/styled/dist/emotion-styled.browser.development.esm.js",
       "file": "@emotion_styled.js",
-      "fileHash": "81639e38",
+      "fileHash": "ebdbd319",
       "needsInterop": false
     },
     "@mui/material": {
       "src": "../../node_modules/@mui/material/index.mjs",
       "file": "@mui_material.js",
-      "fileHash": "fc246117",
+      "fileHash": "e42eaa94",
       "needsInterop": false
     },
     "bootstrap/dist/js/bootstrap.bundle.min.js": {
@@ -49,7 +49,13 @@
     "react-icons/fa": {
       "src": "../../node_modules/react-icons/fa/index.mjs",
       "file": "react-icons_fa.js",
-      "fileHash": "34b96b39",
+      "fileHash": "4bdcc1b5",
+      "needsInterop": false
+    },
+    "react-icons/io": {
+      "src": "../../node_modules/react-icons/io/index.mjs",
+      "file": "react-icons_io.js",
+      "fileHash": "a4ababb3",
       "needsInterop": false
     },
     "react-router-dom": {
@@ -79,13 +85,13 @@
     "swiper/modules": {
       "src": "../../node_modules/swiper/modules/index.mjs",
       "file": "swiper_modules.js",
-      "fileHash": "b8a3793a",
+      "fileHash": "a267ec83",
       "needsInterop": false
     },
     "swiper/react": {
       "src": "../../node_modules/swiper/swiper-react.mjs",
       "file": "swiper_react.js",
-      "fileHash": "1567222e",
+      "fileHash": "1a488820",
       "needsInterop": false
     }
   },
@@ -94,16 +100,20 @@
       "file": "chunk-BoAXSpZd.js",
       "isDynamicEntry": false
     },
-    "emotion-react.browser.development.esm-CI2gUHdE": {
-      "file": "emotion-react.browser.development.esm-CI2gUHdE.js",
+    "emotion-react.browser.development.esm-D7p_p7rj": {
+      "file": "emotion-react.browser.development.esm-D7p_p7rj.js",
       "isDynamicEntry": false
     },
-    "emotion-styled.browser.development.esm-CZQgvW38": {
-      "file": "emotion-styled.browser.development.esm-CZQgvW38.js",
+    "emotion-styled.browser.development.esm-BK8o07wv": {
+      "file": "emotion-styled.browser.development.esm-BK8o07wv.js",
       "isDynamicEntry": false
     },
-    "utils-BCMx1lmO": {
-      "file": "utils-BCMx1lmO.js",
+    "iconBase-9cr0OYL4": {
+      "file": "iconBase-9cr0OYL4.js",
+      "isDynamicEntry": false
+    },
+    "utils-Bv6cSgGJ": {
+      "file": "utils-Bv6cSgGJ.js",
       "isDynamicEntry": false
     }
   }

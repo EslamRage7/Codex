@@ -27,12 +27,12 @@ function Services() {
       <div className="container">
         <Navbar />
 
+        {/* landing */}
         <div className="row mx-lg-4 mx-md-4 mx-sm-3 mx-0 landing align-items-center g-4 text-lg-start text-md-center text-center landing-row">
           <div
             className="col-12 col-lg-6 order-2 order-lg-1  text-lg-start text-center"
             data-aos="fade-right"
-            data-aos-delay="50"
-          >
+            data-aos-delay="50">
             <h1 className="text-capitalize text-white mb-4">
               {t.services.landing.title}
             </h1>
@@ -45,19 +45,18 @@ function Services() {
           <div
             className="col-12 col-lg-6 order-1 order-lg-2 landing-image text-center"
             data-aos="fade-left"
-            data-aos-delay="100"
-          >
+            data-aos-delay="100">
             <img className="img-fluid" src={servicesImage} alt="Codex" />
           </div>
         </div>
 
+        {/* timeline */}
         <MainTitle title={t.services.timelineTitle} />
         <div className="row mx-lg-4 mx-md-4 mx-sm-3 mx-0 g-4 mb-4 text-center timeline-grid">
           {t.services.firstTimeline.map((card, index) => (
             <div
               key={card.id}
-              className="col-lg-3 col-12 text-capitalize timeline-card"
-            >
+              className="col-lg-3 col-12 text-capitalize timeline-card">
               <div className="item">
                 <h3 className="text-white mb-4">{card.title}</h3>
                 <p className="text-white-50">{card.description}</p>
@@ -72,12 +71,12 @@ function Services() {
           ))}
         </div>
 
+        {/* services */}
         <div className="row mx-lg-4 mx-md-4 mx-sm-3 mx-0 g-4 mb-5 pb-5 flex-row-reverse text-center timeline-grid">
           {t.services.secondTimeline.map((card, index) => (
             <div
               key={card.id}
-              className="col-lg-3 col-12 text-capitalize timeline-card"
-            >
+              className="col-lg-3 col-12 text-capitalize timeline-card">
               <div className="item">
                 <h3 className="text-white mb-4">{card.title}</h3>
                 <p className="text-white-50">{card.description}</p>
@@ -90,6 +89,7 @@ function Services() {
           ))}
         </div>
 
+        {/* slider */}
         <div data-aos="fade-up" data-aos-delay="100">
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
@@ -116,28 +116,26 @@ function Services() {
                 spaceBetween: 30,
               },
             }}
-            className="features-slider"
-          >
+            className="features-slider">
             {features.map((feature) => (
               <SwiperSlide key={feature.id}>
                 <div className="feature">
-                  <div className="row align-items-center g-4">
+                  <div className="row mx-lg-4 mx-md-4 mx-sm-3 mx-0 align-items-center g-4 ">
                     <h3 className="text-white text-center text-capitalize">
                       {feature.title}
                     </h3>
-                    <div className="col-12 col-lg-7 col-md-6 order-2 order-lg-1 order-md-1">
+                    <div className="col-12 col-lg-6 col-md-6 order-2 order-lg-1 order-md-1">
                       <ul>
                         {feature.description.map((item, i) => (
                           <li
                             key={i}
-                            className="text-white text-lg-start text-md-start text-center"
-                          >
+                            className="text-white text-lg-start text-md-start text-center">
                             {item}
                           </li>
                         ))}
                       </ul>
                     </div>
-                    <div className="col-12 col-lg-5 col-md-6 order-1 order-lg-2 order-md-2 text-lg-end text-md-end text-center">
+                    <div className="col-12 col-lg-6 col-md-6 order-1 order-lg-2 order-md-2 text-lg-end text-md-end text-center">
                       <img
                         src={feature.image}
                         alt={feature.title}
