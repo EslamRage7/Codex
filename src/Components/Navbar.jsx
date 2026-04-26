@@ -136,7 +136,7 @@ function Navbar() {
                 </button>
               </div>
             </div>
-            <Link className="btn btn-nav" to="/">
+            <Link className="btn btn-nav" to="/contact#form">
               {t.navbar.getStarted}
             </Link>
           </div>
