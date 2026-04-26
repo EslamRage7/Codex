@@ -1,85 +1,91 @@
 {
-  "hash": "bb1af273",
+  "hash": "11fd3b18",
   "configHash": "670424c3",
-  "lockfileHash": "8f69141c",
-  "browserHash": "7192ecef",
+  "lockfileHash": "7560287b",
+  "browserHash": "f9a7961b",
   "optimized": {
     "@emailjs/browser": {
       "src": "../../node_modules/@emailjs/browser/es/index.js",
       "file": "@emailjs_browser.js",
-      "fileHash": "6fe63f9b",
+      "fileHash": "2cccaa3c",
       "needsInterop": false
     },
     "@emotion/react": {
       "src": "../../node_modules/@emotion/react/dist/emotion-react.browser.development.esm.js",
       "file": "@emotion_react.js",
-      "fileHash": "bbe5563e",
+      "fileHash": "55e7ed1e",
       "needsInterop": false
     },
     "@emotion/styled": {
       "src": "../../node_modules/@emotion/styled/dist/emotion-styled.browser.development.esm.js",
       "file": "@emotion_styled.js",
-      "fileHash": "bcdfeb24",
+      "fileHash": "81639e38",
       "needsInterop": false
     },
     "@mui/material": {
       "src": "../../node_modules/@mui/material/index.mjs",
       "file": "@mui_material.js",
-      "fileHash": "21ce6f2c",
+      "fileHash": "fc246117",
       "needsInterop": false
     },
     "bootstrap/dist/js/bootstrap.bundle.min.js": {
       "src": "../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
       "file": "bootstrap_dist_js_bootstrap__bundle__min__js.js",
-      "fileHash": "988127e8",
+      "fileHash": "65c031b5",
       "needsInterop": true
     },
     "react-dom": {
       "src": "../../node_modules/react-dom/index.js",
       "file": "react-dom.js",
-      "fileHash": "0c8ed1d7",
+      "fileHash": "be1ff672",
       "needsInterop": true
     },
     "react-dom/client": {
       "src": "../../node_modules/react-dom/client.js",
       "file": "react-dom_client.js",
-      "fileHash": "da845da2",
+      "fileHash": "88498eb2",
       "needsInterop": true
+    },
+    "react-icons/fa": {
+      "src": "../../node_modules/react-icons/fa/index.mjs",
+      "file": "react-icons_fa.js",
+      "fileHash": "34b96b39",
+      "needsInterop": false
     },
     "react-router-dom": {
       "src": "../../node_modules/react-router-dom/dist/index.mjs",
       "file": "react-router-dom.js",
-      "fileHash": "509661ea",
+      "fileHash": "411b75a7",
       "needsInterop": false
     },
     "react": {
       "src": "../../node_modules/react/index.js",
       "file": "react.js",
-      "fileHash": "51dbdaf1",
+      "fileHash": "576f2a4e",
       "needsInterop": true
     },
     "react/jsx-dev-runtime": {
       "src": "../../node_modules/react/jsx-dev-runtime.js",
       "file": "react_jsx-dev-runtime.js",
-      "fileHash": "0f0eb718",
+      "fileHash": "c6af238b",
       "needsInterop": true
     },
     "react/jsx-runtime": {
       "src": "../../node_modules/react/jsx-runtime.js",
       "file": "react_jsx-runtime.js",
-      "fileHash": "0f5252fe",
+      "fileHash": "e63f39c6",
       "needsInterop": true
     },
     "swiper/modules": {
       "src": "../../node_modules/swiper/modules/index.mjs",
       "file": "swiper_modules.js",
-      "fileHash": "b703ff88",
+      "fileHash": "b8a3793a",
       "needsInterop": false
     },
     "swiper/react": {
       "src": "../../node_modules/swiper/swiper-react.mjs",
       "file": "swiper_react.js",
-      "fileHash": "06bc0191",
+      "fileHash": "1567222e",
       "needsInterop": false
     }
   },
