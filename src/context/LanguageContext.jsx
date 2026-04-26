@@ -40,7 +40,9 @@ export function LanguageProvider({ children }) {
   }, [language]);
 
   return (
-    <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>
+    <LanguageContext.Provider value={value}>
+      {children}
+    </LanguageContext.Provider>
   );
 }
 
@@ -53,4 +55,3 @@ export function useLanguage() {
 
   return context;
 }
-

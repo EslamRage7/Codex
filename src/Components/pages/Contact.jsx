@@ -238,19 +238,19 @@ function Contact() {
     <div className="contact">
       <div className="container">
         <Navbar />
+        {/* landing */}
         <div className="row mx-lg-4 mx-md-4 mx-sm-3 mx-0 landing align-items-center g-4 landing-row">
           <div
             className="col-12 col-lg-6 order-2 order-lg-1 home-content"
             data-aos="fade-right"
-            data-aos-delay="50"
-          >
+            data-aos-delay="50">
             <h1 className="text-capitalize text-white mb-4">
               {t.contact.landing.title}
             </h1>
-            <p className="text-capitalize text-white-50">
+            <p className="text-capitalize text-white-50 ms-lg-3 ms-md-3">
               {t.contact.landing.description}
             </p>
-            <div className="btns-home">
+            <div className="btns-home ms-lg-3 ms-md-3">
               <a href="#" className="btn btn-one px-3">
                 {t.contact.landing.primaryButton}
               </a>
@@ -263,12 +263,12 @@ function Contact() {
           <div
             className="col-12 col-lg-6 order-1 order-lg-2 landing-image text-center"
             data-aos="fade-left"
-            data-aos-delay="100"
-          >
+            data-aos-delay="100">
             <img className="img-fluid" src={contactImage} alt="Codex" />
           </div>
         </div>
 
+        {/* soial */}
         <MainTitle title={t.contact.getInTouchTitle} />
         <div className="row mx-lg-4 mx-md-4 mx-sm-3 mx-0 g-4 mb-5">
           {social.map((item, index) => (
@@ -277,8 +277,7 @@ function Contact() {
                 className="service-card-wrapper"
                 data-aos="fade-up"
                 data-aos-delay={index * 150}
-                data-aos-duration="700"
-              >
+                data-aos-duration="700">
                 <div className="social-card text-center p-4">
                   <img
                     src={item.image}
@@ -292,8 +291,7 @@ function Contact() {
                   <div className="btns-home text-center m-auto">
                     <a
                       href={item.link}
-                      className="btn text-center m-auto btn-one px-3"
-                    >
+                      className="btn text-center m-auto btn-one px-3">
                       {item.show}
                     </a>
                   </div>
@@ -303,25 +301,23 @@ function Contact() {
           ))}
         </div>
 
+        {/* form */}
         <MainTitle title={t.contact.formTitle} />
         <form
           ref={form}
           onSubmit={sendEmail}
           className="mx-lg-4 mx-md-4 mx-sm-3 mx-0 py-5"
-          noValidate
-        >
+          noValidate>
           <Snackbar
             open={Boolean(status.message)}
             autoHideDuration={4000}
             onClose={handleStatusClose}
-            anchorOrigin={{ vertical: "top", horizontal: "center" }}
-          >
+            anchorOrigin={{ vertical: "top", horizontal: "center" }}>
             <Alert
               onClose={handleStatusClose}
               severity={status.type || "info"}
               variant="filled"
-              className="contact-alert"
-            >
+              className="contact-alert">
               {status.message}
             </Alert>
           </Snackbar>
@@ -330,8 +326,7 @@ function Contact() {
             <div
               className="col-lg-6 col-md-6 col-12"
               data-aos="fade-right"
-              data-aos-duration="800"
-            >
+              data-aos-duration="800">
               <Box sx={{ mb: 2 }}>
                 <TextField
                   fullWidth
@@ -366,8 +361,7 @@ function Contact() {
             <div
               className="col-lg-6 col-md-6 col-12"
               data-aos="fade-left"
-              data-aos-duration="800"
-            >
+              data-aos-duration="800">
               <Box sx={{ mb: 2 }}>
                 <TextField
                   fullWidth
@@ -402,8 +396,7 @@ function Contact() {
             <div
               className="col-lg-12"
               data-aos="fade-up"
-              data-aos-duration="800"
-            >
+              data-aos-duration="800">
               <Box sx={{ mb: 2 }}>
                 <Select
                   fullWidth
@@ -412,9 +405,10 @@ function Contact() {
                   onChange={handleChange}
                   displayEmpty
                   error={Boolean(errors.service)}
-                  sx={selectSx("service")}
-                >
-                  <MenuItem value="">{t.contact.form.servicePlaceholder}</MenuItem>
+                  sx={selectSx("service")}>
+                  <MenuItem value="">
+                    {t.contact.form.servicePlaceholder}
+                  </MenuItem>
                   {serviceValues.map((value, index) => (
                     <MenuItem key={value} value={value}>
                       {t.contact.form.services[index]}
@@ -450,8 +444,7 @@ function Contact() {
                 />
                 <label
                   className="form-check-label text-white"
-                  htmlFor="checkDefault"
-                >
+                  htmlFor="checkDefault">
                   {t.contact.form.privacy}
                 </label>
               </div>
@@ -461,14 +454,14 @@ function Contact() {
                 className="text-white mt-4 px-5 py-2 m-auto d-block btn-form"
                 disabled={isSubmitting}
                 data-aos="zoom-in"
-                data-aos-delay="200"
-              >
+                data-aos-delay="200">
                 {isSubmitting ? t.contact.form.sending : t.contact.form.submit}
               </button>
             </div>
           </div>
         </form>
 
+        {/* next step */}
         <MainTitle title={t.contact.nextTitle} />
         <div className="row mx-lg-4 mx-md-4 mx-sm-3 mx-0">
           <div className="col-12">
@@ -477,8 +470,7 @@ function Contact() {
                 <ul
                   className="text-white"
                   data-aos="fade-up"
-                  data-aos-duration="650"
-                >
+                  data-aos-duration="650">
                   {t.contact.nextSteps.map((step, index) => (
                     <li key={index}>{step}</li>
                   ))}
@@ -488,6 +480,7 @@ function Contact() {
           </div>
         </div>
 
+        {/* map */}
         <div className="map mx-lg-4 mx-md-4 mx-sm-3 mx-0 my-5">
           <div className="row">
             <div className="col-12">
@@ -508,4 +501,3 @@ function Contact() {
 }
 
 export default Contact;
-

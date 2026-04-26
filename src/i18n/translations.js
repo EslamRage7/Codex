@@ -86,8 +86,9 @@
       },
     },
     about: {
+      landingSubTitle: "Codex",
       landingTitle:
-        "Codex is a premium software and digital agency serving ambitious businesses in KSA & Egypt, combining engineering, design, and strategy under one roof.",
+        " is a premium software and digital agency serving ambitious businesses in KSA & Egypt, combining engineering, design, and strategy under one roof.",
       consultationButton: "Book a Free Consultation",
       viewButton: "View",
       mission: [
@@ -509,8 +510,9 @@
       },
     },
     about: {
+      landingSubTitle: "كودكس",
       landingTitle:
-        "كودكس وكالة برمجيات وتصميم رقمي فاخرة تخدم الشركات الطموحة في السعودية ومصر، تجمع بين الهندسة والتصميم والاستراتيجية تحت سقف واحد.",
+        " وكالة برمجيات وتصميم رقمي فاخرة تخدم الشركات الطموحة في السعودية ومصر، تجمع بين الهندسة والتصميم والاستراتيجية تحت سقف واحد.",
       consultationButton: "احجز استشارة مجانية",
       viewButton: "عرض",
       mission: [
