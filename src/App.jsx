@@ -4,6 +4,7 @@ import About from "./Components/pages/About";
 import Services from "./Components/pages/Services";
 import Contact from "./Components/pages/Contact";
 import Preloader from "./Components/Preloader";
+import ParticlesBackground from "./Components/ParticlesBackground";
 import { Routes, Route, useLocation } from "react-router-dom";
 
 function App() {
@@ -79,18 +80,21 @@ function App() {
   }, [isLoading]);
 
   return (
-    <>
+    <div className="app-shell">
+      <ParticlesBackground />
       {isLoading ? (
         <Preloader />
       ) : (
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+        <div className="app-content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </div>
       )}
-    </>
+    </div>
   );
 }
 
