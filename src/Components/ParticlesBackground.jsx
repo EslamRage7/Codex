@@ -20,7 +20,7 @@ const particlesOptions = {
       },
       onHover: {
         enable: true,
-        mode: "repulse",
+        mode: "grab",
       },
       resize: {
         enable: true,
@@ -30,7 +30,7 @@ const particlesOptions = {
       grab: {
         distance: 140,
         links: {
-          opacity: 1,
+          opacity: 0.18,
         },
       },
     },
@@ -63,7 +63,7 @@ const particlesOptions = {
     },
     opacity: {
       value: {
-        min: 1,
+        min: 0.18,
         max: 0.45,
       },
     },
