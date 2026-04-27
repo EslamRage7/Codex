@@ -503,10 +503,6 @@
     padding: 10px;
   }
 
-  .about .team-card img {
-    margin-bottom: 10px;
-  }
-
   .about .team-card h3 {
     font-size: 18px;
     margin-bottom: 5px;
@@ -524,10 +520,6 @@
 @media (max-width: 400px) {
   .about .team-card {
     padding: 8px;
-  }
-
-  .about .team-card img {
-    margin-bottom: 8px;
   }
 
   .about .team-card h3 {

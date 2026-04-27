@@ -177,7 +177,7 @@ function About() {
               data-aos-delay={index * 100}>
               <div className="team-card text-center">
                 <img
-                  className="img-fluid mb-3"
+                  className="img-fluid mb-lg-3 mb-md-2 mb-sm-1 mb-0"
                   src={member.image}
                   alt={member.name}
                 />
