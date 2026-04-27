@@ -30,7 +30,7 @@ const particlesOptions = {
       grab: {
         distance: 140,
         links: {
-          opacity: 0.18,
+          opacity: 0.3,
         },
       },
     },
@@ -43,7 +43,7 @@ const particlesOptions = {
       color: "#6b8cff",
       distance: 155,
       enable: true,
-      opacity: 0.14,
+      opacity: 0.2,
       width: 1,
     },
     move: {
@@ -63,8 +63,8 @@ const particlesOptions = {
     },
     opacity: {
       value: {
-        min: 0.18,
-        max: 0.45,
+        min: 0.25,
+        max: 0.5,
       },
     },
     shape: {
